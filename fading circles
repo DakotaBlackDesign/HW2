@@ -1,0 +1,28 @@
+//fading circles
+background(255);
+colorMode(HSB);
+noStroke();
+
+while(true) {
+  background(0, 0, 255, 0.02);
+  fill(random(150,200), 255, 255);
+  ellipse(random(width), random(height), random(20, 40));
+}
+
+//fading redish triangles
+background(255);
+colorMode(HSB);
+noStroke();
+
+while(true) {
+  background(0, 0, 0, 0.01);
+  fill(random(280,360), 255, 255);
+  beginShape(TRIANGLES);
+  x = random(width)
+  y = random(height)
+  size = 30
+	vertex(x, y);
+	vertex(x + random(size), y + random(size));
+	vertex(x - random(size), y + random(size));
+	endShape();
+}
