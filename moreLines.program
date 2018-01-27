@@ -1,0 +1,45 @@
+//(A) draw lines from the center
+function setup() {
+  createCanvas(340, 340);
+}
+
+function draw() {
+  line((width/2), (height/2), random(width), random(height));
+}
+
+//(B) draw lines from top-right quadrant of the canvas
+function setup() {
+  createCanvas(340, 340);
+}
+
+function draw() {
+  line(random(width), random(height), width, 0);
+}
+
+//Challenge: stroke color of each line depends on its start point's x coordinate
+function setup() {
+  createCanvas(340, 340);
+  colorMode(HSB,width)
+}
+
+function draw() {
+  var x = random(width)
+  stroke(x,width,width)
+  line(x, random(height), random(width), random(height));
+}
+
+//Challenge: stroke color of each line depends on its length
+function setup() {
+  createCanvas(340, 340);
+  colorMode(HSB);
+}
+
+function draw() {
+  var x1 = random(width)
+  var x2 = random(height)
+  var y1 = random(width)
+  var y2 = random(height)
+  var c = sqrt(sq(x2-x1) + sq(y2-y1))
+  stroke(c,255,255)
+  line(x1, y1, x2, y2);
+}
