@@ -1,0 +1,24 @@
+function setup() {
+  createCanvas(340, 340);
+  strokeWeight(4)
+  stroke(50)
+  
+} 
+
+function draw() {
+  x = random(width);
+  y = random(height);
+  size = 120
+  line(x, 0, x, height);
+  fill('red')
+  rect(x,random(width),random(size),random(size));
+  line(0, y, width, y);
+  fill(255)
+  rect(random(height),y,random(size),random(size));
+  //line(x, 0, x, height);
+  fill('blue')
+  rect(x,random(height),random(size),random(size));
+  //line(0, y, width, y);
+  fill('#FDFF31')
+  rect(random(height),y,random(size),random(size));
+}
