@@ -1,3 +1,6 @@
+//must be run here: http://p5js.zamfi.net/
+
+
 var squares = 500
 var divisions = 12
 var c = ['#458AFF','#FDFF31','#CC1914','255']
