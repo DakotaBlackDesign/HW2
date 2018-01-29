@@ -1,0 +1,41 @@
+var squares = 1000
+var divisions = 25
+var c = ['red','blue','gold','255']
+var xint = [];
+var yint = [];
+function setup() {
+  createCanvas(400, 400);
+  strokeWeight(4);
+  stroke(50);
+	var count = 0 
+	append(xint,0);
+	append(yint,0);
+	append(xint,width);
+	append(yint,height);
+  while (count < divisions){
+  	append(xint, randomGaussian(random(width),width));
+  	append(yint, randomGaussian(random(height),height));
+  	count = count +1
+  }
+	xint = sort(xint, divisions)
+	yint = sort(yint, divisions)
+	count = 0
+  while (count <squares){
+		i1 = int(random(divisions))
+		i2 = int(random(divisions))
+  	x1 = xint[i1];
+		y1 = yint[i2];
+ 	 	x2 = xint[i1 + 1];
+  	y2 = yint[i2 + 1];
+  	//line(x1, 0, x1, height);
+  	fill(random(c));
+  	beginShape();
+		vertex(x1, y1);
+		vertex(x2, y1);
+		vertex(x2, y2);
+		vertex(x1, y2);
+		endShape(CLOSE);
+    //line(0, y1, width, y1);
+		count = count + 1
+	}
+}
